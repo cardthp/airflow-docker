@@ -1,0 +1,82 @@
+Using Git Bash
+1. $ curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.8.1/docker-compose.yaml'
+
+2. Change AIRFLOW__CORE__EXECUTOR to LocalExecutor
+
+3.Delete
+  3.1
+AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
+AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
+  3.2
+depends_on
+    redis:
+      condition: service_healthy
+  3.3
+redis
+airflow-worker
+flower
+
+4. $ mkdir -p ./dags ./logs ./plugins ./config
+5. $ docker compose up airflow-init
+6. $ docker compose up -d // -d means start the containers in the background
+>ignore airflow-init when it exits itself it just init env for airflow > it will use localhost:8080 from webserver
+
+------------------------------------------------------------
+
+Close Docker
+$ docker compose down -v // -v means including delete volumn in docker container
+
+------------------------------------------------------------
+
+Run airflow by setting up period
+1. Check schedule of airflow > check at container id of airflow-docker-airflow-scheduler-1
+2. $ docker exec -it <container id> bash
+3. $ airflow dags backfill -s <start_date> -e <end_date> <dag_id>
+
+------------------------------------------------------------
+
+Update inside docker compose and run separate service
+$ docker compose up -d --no-deps --build postgres
+
+------------------------------------------------------------
+
+Build Dockerfile to implement python lib to airflow
+1. $ docker build . --tag extending_airflow:latest
+2. change docker-compose from image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.8.1} to ${AIRFLOW_IMAGE_NAME:-extending_airflow:latest}
+3. $ docker compose up -d --no-deps --build airflow-webserver airflow-scheduler
+
+------------------------------------------------------------
+
+Setup minio service 
+Doc https://min.io/docs/minio/container/index.html
+1. $ docker run \
+   -p 9000:9000 \
+   -p 9001:9001 \
+   -e "MINIO_ROOT_USER=ROOTUSER" \
+   -e "MINIO_ROOT_PASSWORD=CHANGEME123" \
+   quay.io/minio/minio server /data --console-address ":9001"
+2. setup connection on airflow by choosing amazon webservice insted of s3 because s3 is no longer available on latest airfow 
+   setting parameter by add extra {"host": "http://host.docker.internal:9000"} and fill in KeyID and KeySecret
+  https://github.com/apache/airflow/discussions/27129
+
+------------------------------------------------------------
+
+Addon : Git
+$ git init
+$ git branch -M main > check by use git status
+$ git remote add origin https://github.com/cardthp/ecommerce-shop.git
+
+$ git add .
+$ git commit -m "-feature :sparkless: first commit"
+$ git push origin main
+$ git push origin develop
+
+$ git checkout develop
+
+use sourcetree to 
+-create branch
+Git Flow > set Production:main / set Develop:develop
+-add feature
+Git Flow > New Feature
+-push feature (Fetch is without automatically merging)
+$ always cilck Fetch then Pull develop and Finish feature
