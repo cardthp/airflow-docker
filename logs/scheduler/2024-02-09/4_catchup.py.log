@@ -3113,3 +3113,31 @@
 [2024-02-09T07:36:52.754+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:36:52.754+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2024-02-09T07:36:52.791+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:36:52.791+0000] {dag.py:3823} INFO - Setting next_dagrun for 4_catchup to 2024-02-08 00:00:00+00:00, run_after=2024-02-09 00:00:00+00:00
 [2024-02-09T07:36:52.822+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/4_catchup.py took 0.139 seconds
+[2024-02-09T07:37:23.017+0000] {processor.py:161} INFO - Started process (PID=21917) to work on /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:37:23.019+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/4_catchup.py for tasks to queue
+[2024-02-09T07:37:23.021+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:37:23.020+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:37:23.045+0000] {processor.py:840} INFO - DAG(s) '4_catchup' retrieved from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:37:23.078+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:37:23.078+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-09T07:37:23.110+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:37:23.110+0000] {dag.py:3823} INFO - Setting next_dagrun for 4_catchup to 2024-02-08 00:00:00+00:00, run_after=2024-02-09 00:00:00+00:00
+[2024-02-09T07:37:23.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/4_catchup.py took 0.130 seconds
+[2024-02-09T07:37:53.313+0000] {processor.py:161} INFO - Started process (PID=21968) to work on /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:37:53.314+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/4_catchup.py for tasks to queue
+[2024-02-09T07:37:53.316+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:37:53.315+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:37:53.340+0000] {processor.py:840} INFO - DAG(s) '4_catchup' retrieved from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:37:53.374+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:37:53.373+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-09T07:37:53.413+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:37:53.413+0000] {dag.py:3823} INFO - Setting next_dagrun for 4_catchup to 2024-02-08 00:00:00+00:00, run_after=2024-02-09 00:00:00+00:00
+[2024-02-09T07:37:53.456+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/4_catchup.py took 0.149 seconds
+[2024-02-09T07:38:23.644+0000] {processor.py:161} INFO - Started process (PID=22019) to work on /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:38:23.645+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/4_catchup.py for tasks to queue
+[2024-02-09T07:38:23.647+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:38:23.646+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:38:23.672+0000] {processor.py:840} INFO - DAG(s) '4_catchup' retrieved from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:38:23.705+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:38:23.705+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-09T07:38:23.738+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:38:23.738+0000] {dag.py:3823} INFO - Setting next_dagrun for 4_catchup to 2024-02-08 00:00:00+00:00, run_after=2024-02-09 00:00:00+00:00
+[2024-02-09T07:38:23.780+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/4_catchup.py took 0.140 seconds
+[2024-02-09T07:38:54.090+0000] {processor.py:161} INFO - Started process (PID=22070) to work on /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:38:54.092+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/4_catchup.py for tasks to queue
+[2024-02-09T07:38:54.095+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:38:54.094+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:38:54.119+0000] {processor.py:840} INFO - DAG(s) '4_catchup' retrieved from /opt/airflow/dags/4_catchup.py
+[2024-02-09T07:38:54.149+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:38:54.149+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-09T07:38:54.178+0000] {logging_mixin.py:188} INFO - [2024-02-09T07:38:54.178+0000] {dag.py:3823} INFO - Setting next_dagrun for 4_catchup to 2024-02-08 00:00:00+00:00, run_after=2024-02-09 00:00:00+00:00
+[2024-02-09T07:38:54.205+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/4_catchup.py took 0.119 seconds
